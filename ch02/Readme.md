@@ -19,3 +19,37 @@ implementation 'org.springframework.boot:spring-boot-starter-web'
 ..
 } 
 it will start tomcat server
+
+
+4. Send a request to books rest api
+```
+python -m httpie POST :9001/books author="Lyra Silverstar" title="Nothern Lights" isbn="1234567891" price=9.90
+HTTP/1.1 201
+Connection: keep-alive
+Content-Type: application/json
+Date: Wed, 25 Jun 2025 14:51:24 GMT
+Keep-Alive: timeout=15
+Transfer-Encoding: chunked
+
+{
+"author": "Lyra Silverstar",
+"isbn": "1234567891",
+"price": 9.9,
+"title": "Nothern Lights"
+}
+
+C:\Users\user>python -m httpie GET :9001/books/1234567891
+HTTP/1.1 200
+Connection: keep-alive
+Content-Type: application/json
+Date: Wed, 25 Jun 2025 14:54:26 GMT
+Keep-Alive: timeout=15
+Transfer-Encoding: chunked
+
+{
+    "author": "Lyra Silverstar",
+    "isbn": "1234567891",
+    "price": 9.9,
+    "title": "Nothern Lights"
+}
+```
