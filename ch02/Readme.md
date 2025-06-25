@@ -69,3 +69,20 @@ Transfer-Encoding: chunked
 }
 
 ```
+
+6. Deployment pipeline: Build and test
+Commit stage
+* After developer commit the code
+* build, unit test, integration test, static code analysis, packaging
+* published artifact -> release candidate
+* should be under 5 minutes
+
+Acceptance stage
+* deploy application to production-like environment
+* normally test under one hour: functional test, non-functional (e.g: performance), security test, compliance test, mannual task like exploratory and usability
+
+Production stage
+* normally triggered manually
+
+
+
