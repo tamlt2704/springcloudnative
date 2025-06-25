@@ -53,3 +53,19 @@ Transfer-Encoding: chunked
     "title": "Nothern Lights"
 }
 ```
+
+5. test validation
+```
+C:\Users\user>python -m httpie POST :9001/books author="John Snow" title="" isbn="123ABC56Z" price=9.9
+HTTP/1.1 400
+Connection: close
+Content-Type: application/json
+Date: Wed, 25 Jun 2025 15:03:06 GMT
+Transfer-Encoding: chunked
+
+{
+    "isbn": "The ISBN format must be valid.",
+    "title": "The book title must be defined."
+}
+
+```
