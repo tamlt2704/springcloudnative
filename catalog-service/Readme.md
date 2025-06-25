@@ -84,5 +84,10 @@ Acceptance stage
 Production stage
 * normally triggered manually
 
-
+7. github workflow
+* workflow is organized into jobs that run parallel
+* each job is run on a runner interface - provided by github
+* permission each job should have
+* each job is composed of steps, run sequential
+* a step could be a shell command or action (action provided by github or third party)
 
