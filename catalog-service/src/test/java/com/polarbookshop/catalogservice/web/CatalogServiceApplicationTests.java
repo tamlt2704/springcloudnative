@@ -106,4 +106,6 @@ class CatalogServiceApplicationTests {
 						assertThat(errorMessage).isEqualTo("The book with ISBN " + bookIsbn + " was not found.")
 				);
 	}
+
+	//TODO add test to pull configuration
 }
