@@ -92,3 +92,15 @@ Production stage
 * a step could be a shell command or action (action provided by github or third party)
 
 curl https://start.spring.io/starter.zip -d groupId=com.polarbookshop -d artifactId=config-service -d name=config-service -d packageName=com.polarbookshop.configservice -d dependencies=cloud-config-server -d javaVersion=17 -d bootVersion=3.5.3 -d type=gradle-project -o config-service.zip
+
+
+8. start a postgresql server
+```
+docker run -d \
+--name polar-postgres \
+-e POSTGRES_USER=user \
+-e POSTGRES_PASSWORD=password \
+-e POSTGRES_DB=polardb_catalog \
+-p 5432:5432 \
+postgres:14.12
+```

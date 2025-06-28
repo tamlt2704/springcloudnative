@@ -18,8 +18,8 @@ public class BookDataLoader {
 
     @EventListener(ApplicationReadyEvent.class)
     public void loadBookTestData() {
-        var book1 = new Book("123467891", "Northern Lights", "Lyra Silverstar", 9.9);
-        var book2 = new Book("123467892", "Polar Journey", "Iorek Polarson", 12.9);
+        var book1 = Book.of( "123467891", "Northern Lights", "Lyra Silverstar", 9.9);
+        var book2 = Book.of("123467892", "Polar Journey", "Iorek Polarson", 12.9);
         bookRepository.save(book1);
         bookRepository.save(book2);
     }
