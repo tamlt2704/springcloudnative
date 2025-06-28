@@ -91,3 +91,4 @@ Production stage
 * each job is composed of steps, run sequential
 * a step could be a shell command or action (action provided by github or third party)
 
+curl https://start.spring.io/starter.zip -d groupId=com.polarbookshop -d artifactId=config-service -d name=config-service -d packageName=com.polarbookshop.configservice -d dependencies=cloud-config-server -d javaVersion=17 -d bootVersion=3.5.3 -d type=gradle-project -o config-service.zip
